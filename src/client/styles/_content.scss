@@ -1,0 +1,44 @@
+.holder__cardContent {
+  flex: 1 1 100%;
+  padding: 25px 25px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.9);
+  transition: 0.3s;
+  border-radius: 5px; /* 5px rounded corners */
+
+  & .title {
+    display: block;
+    margin-bottom: 1rem;
+  }
+}
+
+.img__card {
+  max-width: 320px;
+  height: auto;
+  display: block;
+  img {
+    @include card(#fff, #000);
+    transition: 0.3s;
+    object-fit: cover;
+    width: 100%;
+    background-color: #fff;
+    color: black;
+  }
+}
+
+.button_flex .button__save .delete___button {
+  display: flex;
+  background-color: $secondary-color;
+  border: none;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 2rem;
+  margin-top: 1rem;
+  border-radius: 12px;
+}

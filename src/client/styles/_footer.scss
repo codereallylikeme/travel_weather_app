@@ -1,0 +1,19 @@
+.footer-bg {
+  @include card(#fff, #333);
+  padding: 1rem;
+  margin: 1rem;
+  background-color: $primary-color;
+  color: #333;
+  border-bottom: 5px solid $secondary-color;
+}
+
+.container-grid p {
+  margin: 0px 10px;
+  font-size: 2rem;
+  padding: 1rem;
+}
+.container-grid .social {
+  padding: 10px 10px 10px 10px;
+  font-size: 1.5rem;
+  margin: 1rem;
+}

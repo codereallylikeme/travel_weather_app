@@ -1,0 +1,19 @@
+.app__header{
+  @include card($primary-color,#000);
+  text-align: center;
+  padding: 1rem;
+  margin: 1rem;
+  text-decoration: none;
+  line-height: 3rem;
+  border-bottom: 5px solid $secondary-color;
+
+  .holder_headline h1{
+ padding: 1rem;
+ font-size: calc(1.3rem + 3.6vw);
+ margin-bottom: 1rem;
+ font-weight: 700;
+
+   
+  }
+  
+}

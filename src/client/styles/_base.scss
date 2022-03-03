@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
+
+$primary-color: #a5bacc;
+$secondary-color: #2456a5;
+$asset-color: #4c8b59;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@mixin card($background, $color) {
+  background: $background;
+  color: $color;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  font-weight: 700;
+  line-height: 1;
+  font-family: 'PT Sans Narrow', 'sans-serif';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container > div {
+  max-width: 100%;
+  padding: 0.75rem;
+}
+
+.container {
+  min-height: auto;
+  max-width: 18, 75rem;
+  display: grid;
+  padding: 2rem 2rem;
+  text-align: center;
+  background: $primary-color;
+  box-shadow: 4px 4px 0px 0px $secondary-color;
+  transition: 0.3s;
+  border-radius: 5px; /* 5px rounded corners */
+  grid-auto-rows: minmax(18.75rem, auto);
+  grid-template-columns: 1fr;
+  gap: 5px;
+  grid-template-areas:
+    'hd'
+    'hf'
+    'hc'
+    'ft';
+
+  @media screen and (min-width: 31.25rem) {
+    grid-template-columns: repeat(autofill, minmax(18.75rem, 1fr));
+    gap: 10px;
+    grid-template-areas:
+      'hd hd'
+      'hf hc'
+      'ft ft';
+  }
+
+  @media screen and (min-width: 43.75rem) {
+    grid-template-columns: repeat(autofill, minmax(18.75rem, 1fr));
+    grid-template-areas:
+      'hd hd'
+      'hf hc'
+      'ft ft';
+  }
+}
+
+.app__header {
+  grid-area: hd;
+}
+.footer-bg {
+  grid-area: ft;
+}
+.holder_form {
+  grid-area: hf;
+}
+.holder__cardContent {
+  grid-area: hc;
+}
+
+#entryHolder {
+  height: fit-content;
+}
+
+#date {
+  font-weight: bold;
+}
+
+#setNote {
+  color: #fff;
+  background-color: #000;
+  opacity: 0.9;
+  box-shadow: -3px 3px 6px #000;
+  padding: 1rem 1rem 2rem 1rem;
+  height: 95%;
+  width: 95%;
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  font-size: 2rem;
+
+  #setNote .header + div {
+    background: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 1);
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    top: 1px;
+    color: #d7666b;
+    padding: 20px;
+    margin: 30px;
+    border: 1px solid #d7666b;
+  }
+
+  h2 {
+    color: #d7666b;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+  .header {
+    text-align: right;
+    background-color: #000;
+    border: none;
+    padding: 0 0 0 10px;
+  }
+}
+
+#weather__card {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  grid-gap: 20px;
+  list-style: none;
+
+  .weather__Card {
+    font-size: 0.5rem;
+    padding: 0 0 1rem 1rem;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-rows: max-content 200px 1fr;
+  }
+}

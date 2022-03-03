@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Travel weather app</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+ <body>
+   <div class="container">
+   <header class="app__header">
+       <div class ="holder_headline">
+         <h1>Travel Weather App</h1>
+         <h2>Start planning your dream trip today</h2>
+       </div>
+</header>
+  <div class ="holder_form">
+    <form id="myForm">
+    <label for="departure"(required)></label>
+    <i class="fas fa-map-marker-alt" style="font-size: 2em; color: rgb(83, 71, 255)";></i>
+    <input type="text" id="location__trip" placeholder="Enter your destination land" required>
+    <label for="Date"(required)></label>
+    <input class="myInput" type="date" id="departure_Date" placeholder="Enter your departure Date" step="16"  min="2022-02-21" max="2035-03-08" required>
+    <div id="warning">City and Date are required</div>
+   <button id="generate" type= "submit"> Add trip </button>
+    </form>
+    </div>
+    <div class ="holder__cardContent" id="printSection">
+    <div class = "title">Most Recent Entry</div>
+    <div class="img__card">
+      <img id="image__api" src="/src/client/assets/images/img-002.jpg" alt=" a city picture">
+    </div>
+   <div id = "entryHolder">
+   <div id="days__remain"></div>
+   <div id = "temp"></div>
+   <div id="city"></div>
+   <div id="country"></div>
+   <div id="description"></div>
+   <div id="icon">
+     <img id="icon__api" src="/src/client/assets/images/c02d.png" alt="weather icon">
+    </div>
+   <div id="content">
+     <ul id="weather__card"></ul>
+   </div>
+  <div class="button_flex">
+  <button class="button button__save" id="save" href="#">Print</button>
+  <button class="button delete__button" id="delete" href="#">Remove</button>
+  </div>
+    </div>
+    </div>
+   <footer class="footer-bg">
+        <div class="container-grid">
+            <div>
+                 <p>Copyright &copy;2022</p>
+            </div>
+                <div class="social">
+                    <a href="https://github.com/codereallylikeme" target="_blank" rel="noopener"><i class="fab fa-github fa-2x"></i></a>
+                    <a href="https://www.facebook.com/adetola.adelajaokesanya" target="_blank" rel="noopener"><i class="fab fa-facebook fa-2x"></i></a>
+                    <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                    <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+                    <a href="https://www.linkedin.com/in/david-okesanya-0b12b3221/"><i class="fab fa-linkedin fa-2x"></i></a>
+                </div>
+            </div>
+    </footer>
+</div>
+
+<script>
+  if ('serviceWorker' in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/service-worker.js');
+        });
+      }
+</script>
+ </body>
+
+
+    <script src="https://kit.fontawesome.com/7c7fab75ec.js" crossorigin="anonymous"></script>
+</body>
+</html>
