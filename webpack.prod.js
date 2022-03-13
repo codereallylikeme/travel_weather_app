@@ -66,5 +66,6 @@ module.exports = {
       patterns: [{ from: './src/client/assets/images', to: './images' }],
     }),
     new MiniCssExtractPlugin({ filename: '[name].css' }),
+    new WorkboxPlugin.GenerateSW(),
   ],
 };

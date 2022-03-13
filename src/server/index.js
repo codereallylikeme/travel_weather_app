@@ -25,7 +25,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use(cors());
-app.set('port', PORT)
+
 
 app.get('/', function (req, res) {
   res.sendFile(path.resolve('dist/index.html'));
