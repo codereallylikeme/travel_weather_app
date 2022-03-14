@@ -19,7 +19,7 @@ const USER_Name = process.env.USER_Name;
 const PIXABAY_API_KEY = process.env.PIXABAY_API_KEY;
 
 const app = express();
-app.use(express.static('dist'));
+app.use(express.static(__dirname + '/dist'));
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
