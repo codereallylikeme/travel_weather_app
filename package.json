@@ -18,15 +18,16 @@
   "name": "travel_weather_app",
   "version": "1.0.0",
   "engines": {
-    "node": "v16.13.1"
+    "node": "16.13.1"
   },
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "dev": "node src/server/index.js",
+    "start": "node src/server/index.js",
     "build-prod": "webpack --config webpack.prod.js",
     "build-dev": "webpack-dev-server --config webpack.dev.js --open",
-    "heroku-postbuild": "webpack -p"
+    "heroku-postbuild": "webpack --config webpack.prod.js"
+    
     
     
   },
