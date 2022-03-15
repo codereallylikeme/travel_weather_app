@@ -12,7 +12,7 @@ const cors = require('cors');
 const Promise = require('es6-promise').Promise;
 const bodyParser = require('body-parser');
 
-const PORT = process.env.PORT || 8081;
+const port = process.env.PORT || 8081;
 
 const WEATHER_A_BIT_API_KEY = process.env.WEATHER_A_BIT_API_KEY;
 const USER_Name = process.env.USER_Name;
@@ -88,7 +88,8 @@ app.post('/getTrip', async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`listening at ${PORT}`);
-});
+//app.listen(port, () => {
+  //console.log(`listening at ${port}`);
+//});
+app.listen(process.env.PORT || 8081);
 
