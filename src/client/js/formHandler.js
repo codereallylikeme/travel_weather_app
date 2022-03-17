@@ -62,7 +62,7 @@ function handleSubmit(event) {
       }
     };
 
-    postData('http://localhost:8081/getTrip', {
+    postData('/getTrip', {
       location,
     }).then((data) => {
       updateUI(data); // funtion that display respond on the page
