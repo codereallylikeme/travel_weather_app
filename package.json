@@ -11,6 +11,7 @@
     "i": "^0.3.7",
     "init": "^0.1.2",
     "path": "^0.12.7",
+    "sass": "^1.62.0",
     "save": "^2.4.0",
     "serve": "^13.0.2",
     "webpack-cli": "^4.9.1"
@@ -28,9 +29,6 @@
     "build-prod": "webpack --config webpack.prod.js",
     "build-dev": "webpack-dev-server --config webpack.dev.js --open",
     "heroku-postbuild": "npm run build-prod"
-    
-    
-    
   },
   "keywords": [],
   "author": "David Okesanya",
@@ -49,7 +47,6 @@
     "html-webpack-plugin": "^5.3.1",
     "jest": "^27.5.1",
     "mini-css-extract-plugin": "^1.5.1",
-    "node-sass": "^7.0.1",
     "sass-loader": "^12.4.0",
     "style-loader": "^3.3.1",
     "supertest": "^6.2.2",
