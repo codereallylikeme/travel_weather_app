@@ -1,5 +1,4 @@
-alert('I EXIST');
-console.log('CHANGE!!');
+
 
 import { handleSubmit } from './js/formHandler';
 import { show } from './js/formHandler';
