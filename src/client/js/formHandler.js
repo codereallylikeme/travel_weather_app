@@ -44,8 +44,10 @@ function handleSubmit(event) {
     
     const postData = async (url = '', data = {}) => {
       // post the request to the server
+      
       const response = await fetch(url, {
-        // awiting the respond from the server
+        // awaiting the respond from the server
+        mode:'cors',
         method: 'POST',
         credentials: 'same-origin',
         headers: {
@@ -58,12 +60,12 @@ function handleSubmit(event) {
         console.log(data);
         return data;
       } catch (error) {
-        console.log('error', error);
+        console.log(error);
       }
     };
 
-    postData('/getTrip', {
-      location,
+    postData('http://localhost:8081/getTrip', {
+      location
     }).then((data) => {
       updateUI(data); // funtion that display respond on the page
       console.log(data);
